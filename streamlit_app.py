@@ -2,7 +2,12 @@ import streamlit
 import pandas
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cnx = snowflake.connector.connect( user="STREAMLIT",
+                password="StreamLit!300",
+                account="rb51215.ca-central-1.aws",
+                warehouse="PC_RIVERY_WH",
+                database="PC_RIVERY_DB",
+                schema="PUBLIC")
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_data_row = my_cur.fetchone()
