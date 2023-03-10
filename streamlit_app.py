@@ -3,7 +3,7 @@ import pandas
 import snowflake.connector
 
 my_cnx = snowflake.connector.connect( user="STREAMLIT",
-                password="StreamLit!300",
+                password="StreamLit!300!",
                 account="rb51215.ca-central-1.aws",
                 warehouse="PC_RIVERY_WH",
                 database="PC_RIVERY_DB",
